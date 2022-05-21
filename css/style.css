@@ -1,0 +1,81 @@
+body{
+    background-color: aliceblue;    
+    font-family: 'Montserrat', sans-serif;     
+}
+.container{      
+    width: 100%;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}
+.encabezado{
+    width: 80%;
+    margin: auto;
+    padding: 2em;
+}
+/* Menu inicial de la aplicacion */
+.menu{
+    margin: 10% auto;    
+    width: 80%;    
+}
+.btn{
+    display: block;
+    margin: 0 auto;    
+    cursor: pointer;
+    border-radius: 20px;    
+}
+.btnIni{
+    background-color: #0A3871;    
+    padding: 30px;
+    color: #ffffff;
+    width: 20%;
+    font-size: 18px;
+    border: 1px solid #0A3871;
+}
+.btnIni:hover{
+    background-color: #044da6;
+    transition-duration: 1ms;
+}
+.btnAgr{
+    background-color: #ffffff;
+    border: 1px solid #0A3871;    
+    padding: 25px;
+    margin-top: 2em;
+    width: 16%;
+}
+.btnAgr:hover{
+    background-color: #dedede;    
+    transition-duration: 1ms;
+}
+
+.piePagina{
+    margin-top: 5%;
+}
+.piePagina ul{
+    text-align: center;   
+   
+}
+.items{
+    display: inline-block;
+    padding: 10px 7px;    
+}
+.items a i{
+    color: #0A3871;
+    font-size: 30px;
+}
+.ocultar{
+    display: none;    
+}
+    
+@media screen and (max-width:900px){
+    .menu{
+        width: 90%;
+    }
+    .btnIni{
+        width: 30%;
+    }
+    .btnAgr{
+        width: 26%;
+    }
+}
+
