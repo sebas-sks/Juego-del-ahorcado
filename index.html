@@ -17,20 +17,26 @@
             <a href="https://app.aluracursos.com/"><img src="img/Vector.png" alt="Logo alura"></a>
         </header>
         <main class="container">
-            <section class="menu" id="menu">
+            <section class="menu ocultar" id="menu">
                 <button class="btn1 btnIni" id="btnIni">Iniciar Juego</button>
                 <button class="btn1 btnAgr" id="btnAgr">Agregar nueva palabra</button>
             </section> 
             <section class="agrPalabra ocultar" id="agrPalabra">
-                <input type="text"  class="txtAgre" id="txtAgre" placeholder="Ingrese una Palabra">        
+                <input type="text"  class="txtAgre" id="txtAgre" placeholder="Ingrese una Palabra" maxlength="8">        
                 <div class="divControles">
                     <label for=""><i class="material-icons" style="font-size:12px">error_outline</i>Máx. de 8 letras</label><br><br>
-                    <button class="btn btnGuardar">Guardar y Empezar</button>
-                    <button class="btn btnCancelar" id="btnCancelar">Cancelar</button>
+                    <button class="btn btnControl1">Guardar y Empezar</button>
+                    <button class="btn btnControl2" id="btnCancelar">Cancelar</button>
                 </div>
-            </section>
-            <script src="../js/contenido-dinamico.js"></script>
-            <!---<iframe src="html/agregar-palabra.html" id="agrPalabra" class="frmAgregar ocultar" frameborder="0"></iframe>--->
+            </section>  
+            <section class="secJuego" id="secJuego">
+                <canvas id="canvahorcado" class="canvahorcado"></canvas>
+                <div id="palabraAdivinar"></div>
+                <div class="divclsJuego">
+                    <button class="btn3 btnControl1">Nuevo Juego</button>
+                    <button class="btn3 btnControl2" id="btnDesistir">Desistir</button>
+                </div>
+            </section>             
         </main>
     </body>
     <footer class="piePagina">
@@ -42,4 +48,5 @@
         </div> 
     </footer>
     <script src="js/contenido-dinamico.js"></script>
+    <script src="js/graficar.js"></script>
 </html>

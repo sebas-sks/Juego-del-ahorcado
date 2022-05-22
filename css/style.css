@@ -79,3 +79,108 @@ body{
     }
 }
 
+/* Estilos CSS para la seccion de agregar palabra */
+
+.agrPalabra, .secJuego{
+    width: 60%;    
+    margin: auto;       
+}
+.txtAgre{
+    width: 400px;
+    font-size: 18px;
+    padding: 12px;
+    margin-left: 30px;
+    border: 0;
+}
+.divControles{    
+    margin-top: 40%;
+    margin-left: 3em;             
+}
+.btn{
+    display: inline-block;   
+    width: 380px;
+    height: 80px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;    
+}
+.btnControl1{
+    background-color: #0A3871;
+    color: #ffffff;
+    border-color: #0A3871;
+    margin-right: 10px;
+}
+.btnControl1:hover{
+    background-color: #0f4d99;
+    transition-duration: 1ms;
+}
+.btnControl2{
+    background-color: #ffffff;
+    color: #0A3871;
+    border-color: #0A3871;
+    margin-right: 10px;
+}
+.btnControl2:hover{
+    background-color: #dedede;
+    transition-duration: 1ms;
+}
+@media screen and (max-width:1400px){
+    
+    .txtAgre{        
+        width: 80%;
+        margin: 10px auto 0 0;
+    }
+    .divControles{
+        width: 80%;
+        
+    }
+    .btn{       
+        display: inline-block; 
+        width: 48%;
+        height: 50px;        
+    }
+  
+}
+
+@media screen and (max-width:900px){
+    .agrPalabra{
+        width: 90%;                
+    }
+    .txtAgre{        
+        width: 80%;
+        margin: 10px auto 0 0;
+    }
+    .divControles{
+        width: 80%;
+        
+    }
+    .btn{
+        display: block;
+        width: 90%;
+        height: 50px;
+        margin: 10px auto 0 0;                    
+    }
+  
+}
+    
+/* Seccion CSS del Juego */
+
+.canvahorcado{        
+    margin: auto;
+    display: block;
+    width: 50%;
+    height: 400px;        
+}
+.divclsJuego{   
+    margin: 20px auto;    
+    width: 70%;
+    display: flex;   
+}
+.btn3{
+    margin: auto;    
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px; 
+}
