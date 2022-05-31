@@ -240,11 +240,11 @@ body{
         margin: 0 auto; 
     }
     .btnControl1, .btnControl2{
-        margin: 0 auto; 
+        margin: 10px auto; 
         display: flow-root;
         width: 100%;
     }
     .letra{
-        font-size: 5px;
+        font-size: 10px;
     }
 }
