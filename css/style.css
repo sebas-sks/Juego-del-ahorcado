@@ -67,17 +67,6 @@ body{
     display: none;    
 }
     
-@media screen and (max-width:900px){
-    .menu{
-        width: 90%;
-    }
-    .btnIni{
-        width: 30%;
-    }
-    .btnAgr{
-        width: 26%;
-    }
-}
 
 /* Estilos CSS para la seccion de agregar palabra */
 
@@ -124,44 +113,7 @@ body{
     background-color: #dedede;
     transition-duration: 1ms;
 }
-@media screen and (max-width:1400px){
-    
-    .txtAgre{        
-        width: 80%;
-        margin: 10px auto 0 0;
-    }
-    .divControles{
-        width: 80%;
-        
-    }
-    .btn{       
-        display: inline-block; 
-        width: 48%;
-        height: 50px;        
-    }
-  
-}
 
-@media screen and (max-width:900px){
-    .agrPalabra{
-        width: 90%;                
-    }
-    .txtAgre{        
-        width: 80%;
-        margin: 10px auto 0 0;
-    }
-    .divControles{
-        width: 80%;
-        
-    }
-    .btn{
-        display: block;
-        width: 90%;
-        height: 50px;
-        margin: 10px auto 0 0;                    
-    }
-  
-}
     
 /* Seccion CSS del Juego */
 .secJuego{
@@ -204,4 +156,95 @@ body{
     border-radius: 30px;
     cursor: pointer;
     font-size: 15px; 
+}
+
+
+@media screen and (max-width:1400px){
+    
+    .txtAgre{        
+        width: 80%;
+        margin: 10px auto 0 0;
+    }
+    .divControles{
+        width: 80%;
+        
+    }
+    .btn{       
+        display: inline-block; 
+        width: 48%;
+        height: 50px;        
+    }
+    #palabraAdivinar, #listPalabra, #letrasUsadas, #divclsJuego{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width:1000px){
+    .menu{
+        width: 100%;
+    }
+    .btnIni, .btnAgr{
+        width: 50%;
+    }
+    .btnIni{
+        width: 30%;
+    }
+    .btnAgr{
+        width: 26%;
+    }
+    .agrPalabra{
+        width: 90%;                
+    }
+    .txtAgre{        
+        width: 80%;
+        margin: 10px auto 0 0;
+    }
+    .divControles{
+        width: 80%;
+        
+    }
+    .btn{
+        display: block;
+        width: 90%;
+        height: 50px;
+        margin: 10px auto 0 0;                    
+    }
+    .secJuego, .canvahorcado{
+        width: 100%;
+    }
+    #palabraAdivinar, #listPalabra, #letrasUsadas, .divclsJuego{
+        width: 80%;
+        margin: 0 auto; 
+    }
+    .divclsJuego{
+        display: block;
+    }
+    .btnControl1, .btnControl2{
+        margin: 0 auto; 
+        display: flow-root;
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .menu{
+        width: 100%;
+    }
+    .btnIni, .btnAgr{
+        width: 50%;
+    }
+    #palabraAdivinar, #listPalabra, #letrasUsadas, .divclsJuego{
+        width: 90%;
+        margin: 0 auto; 
+    }
+    .btnControl1, .btnControl2{
+        margin: 0 auto; 
+        display: flow-root;
+        width: 100%;
+    }
+    .letra{
+        font-size: 5px;
+    }
 }
