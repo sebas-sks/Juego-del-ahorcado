@@ -14,7 +14,7 @@ const frmJuego = document.querySelector("#secJuego");
 btnIniciar.addEventListener("click", function(){    
     gestorContenido(frmJuego, frmIniciar);       
     iniciarJuego();     
-    dibujoCompleto();
+    //dibujoCompleto();
     //window.onkeydown = captar;
 });
 

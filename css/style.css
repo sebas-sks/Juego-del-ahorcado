@@ -239,12 +239,13 @@ body{
         width: 90%;
         margin: 0 auto; 
     }
+    .span{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .btnControl1, .btnControl2{
         margin: 10px auto; 
         display: flow-root;
         width: 100%;
-    }
-    .letra{
-        font-size: 10px;
-    }
+    }    
 }
