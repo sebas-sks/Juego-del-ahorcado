@@ -4,11 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">           
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/reset.css">        
-        <link rel="stylesheet" href="css/style-agregarPalabra.css"> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
+        <link rel="stylesheet" href="css/reset.css">                
         <link rel="stylesheet" href="css/style.css">        
         <title>Juego del ahorcado</title>
     </head>
@@ -16,27 +15,35 @@
         <header class="encabezado">
             <a href="https://app.aluracursos.com/"><img src="img/Vector.png" alt="Logo alura"></a>
         </header>
+        
         <main class="container">
+            <!--Contenedor de opciones principales-->
             <section class="menu" id="menu">
                 <button class="btn1 btnIni" id="btnIni">Iniciar Juego</button>
                 <button class="btn1 btnAgr" id="btnAgr">Agregar nueva palabra</button>
             </section> 
+            <!--FIN-->
+            <!--Contenedor para agregar una palabra nueva al juego-->
             <section class="agrPalabra ocultar" id="agrPalabra">
-                <input type="text"  class="txtAgre" id="txtAgre" placeholder="Ingrese una Palabra" maxlength="8">        
+                <input type="text"  class="txtAgre" id="txtAgre" placeholder="Ingrese una Palabra">        
                 <div class="divControles">
                     <label for=""><i class="material-icons" style="font-size:12px">error_outline</i>Máx. de 8 letras</label><br><br>
-                    <button class="btn btnControl1">Guardar y Empezar</button>
+                    <button class="btn btnControl1" id="btnGuardar">Guardar y Empezar</button>
                     <button class="btn btnControl2" id="btnCancelar">Cancelar</button>
                 </div>
             </section>  
+            <!--FIN-->
+            <!--Contenedor del Juego-->
             <section class="secJuego ocultar" id="secJuego">
-                <canvas id="canvahorcado" class="canvahorcado"></canvas>
-                <div id="palabraAdivinar"></div>
+                <canvas id="canvahorcado" class="canvahorcado" width="1200px" height="800px"></canvas>
+                <div id="palabraAdivinar"><ul id="listPalabra"></ul></div>
+                <div id="letrasUsadas"><span class="span" id="span">23df</span></div>
                 <div class="divclsJuego">
-                    <button class="btn3 btnControl1">Nuevo Juego</button>
+                    <button class="btn3 btnControl1" id="btnNuevo" value="0">Nuevo Juego</button>
                     <button class="btn3 btnControl2" id="btnDesistir">Desistir</button>
                 </div>
             </section>             
+            <!--FIN-->
         </main>
     </body>
     <footer class="piePagina">
@@ -46,7 +53,11 @@
                 <li class="items"><a href="https://www.linkedin.com/in/sebastian-velaco-5977691b1/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>            
         </div> 
-    </footer>
+    </footer>  
+        
     <script src="js/contenido-dinamico.js"></script>
+    <script src="js/sortearPalabra.js"></script>
     <script src="js/graficar.js"></script>
+    <script src="js/validacion-teclado.js"></script>        
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

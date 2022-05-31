@@ -81,7 +81,7 @@ body{
 
 /* Estilos CSS para la seccion de agregar palabra */
 
-.agrPalabra, .secJuego{
+.agrPalabra{
     width: 60%;    
     margin: auto;       
 }
@@ -164,18 +164,39 @@ body{
 }
     
 /* Seccion CSS del Juego */
-
+.secJuego{
+    margin: auto;
+    width: 90%;     
+}
 .canvahorcado{        
     margin: auto;
-    display: block;
-    width: 50%;
-    height: 400px;        
+    display: block;       
 }
-.divclsJuego{   
+
+.divclsJuego, #palabraAdivinar, #letrasUsadas{   
     margin: 20px auto;    
     width: 70%;
-    display: flex;   
+    display: flex;      
 }
+
+
+#listPalabra, .span{
+    margin: 0px auto;    
+    width: 100%;    
+    text-align: center;      
+}
+
+.span{
+    font-weight: bold;
+    color: #1534ff;
+    font-size: 20px;
+}
+
+.letra{
+    font-weight: bold;
+    padding-right: 2px;
+}
+
 .btn3{
     margin: auto;    
     width: 300px;
