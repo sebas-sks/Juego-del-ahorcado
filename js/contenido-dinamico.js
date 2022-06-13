@@ -11,8 +11,7 @@ const frmJuego = document.querySelector("#secJuego");
 
 
 btnIniciar.addEventListener("click", function(){       
-    gestorContenido(frmJuego, frmIniciar);     
-    focus();  
+    gestorContenido(frmJuego, frmIniciar);           
     iniciarJuego();     
     //dibujoCompleto();
     //window.onkeydown = captar;
@@ -46,10 +45,6 @@ btnDesistir.addEventListener("click", function(){
 function gestorContenido(mostrar, quitar){    
     quitar.classList.add("ocultar");
     mostrar.classList.remove("ocultar");
-}
-
-function focus(){
-    document.querySelector("#key").focus();
 }
 
 /*

@@ -124,8 +124,8 @@ body{
 .key{
     background-color: transparent;
     border: 0;
-    width: 10px; 
-    opacity: 0;    
+    width: auto; 
+    opacity: 0;
 }
 
 

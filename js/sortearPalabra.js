@@ -1,9 +1,15 @@
 const palabras = ["JAVA", "AUTO", "CASA", "PERRO","NADIE", "MOUSE", "NUEVE", "CARTON"];
 var palabraAzar = "";
 var palabraCambio = [];
+var l = document.querySelector("#key");
+var i = 0;
+
+
 
 function iniciarJuego(){    
-    espaciosLetras();
+    espaciosLetras();    
+    focus();
+    escribir();
     //limpiarTablero();
 }
 
@@ -33,16 +39,28 @@ function limpiarEspacios(){
     }
 }
 
-function crearEspacio(i){
-    
+function crearEspacio(i){    
     lista = document.querySelector("#listPalabra");
     var li = document.createElement("li");
     li.classList.add("items");
     li.classList.add("letra");
-    li.id = (i);
+    li.id = ("item"+i+"");
     li.textContent = "_____";
     lista.appendChild(li);
 }
+
+function focus(){
+    document.querySelector("#key").focus();    
+}
+
+function escribir(){
+    var spanIncorrecta = document.querySelector(".span");
+    var letra = document.querySelector("#key");
+    letra.addEventListener("keydown", function(){
+        alert(letra.value);
+    });
+}
+
 
 
 
