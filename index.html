@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/style.css">        
         <title>Juego del ahorcado</title>
     </head>
-    <body>
+    <body onload="focus(); ">
         <header class="encabezado">
             <a href="https://app.aluracursos.com/"><img src="img/Vector.png" alt="Logo alura"></a>
         </header>
@@ -36,6 +36,7 @@
             <!--Contenedor del Juego-->
             <section class="secJuego ocultar" id="secJuego">
                 <canvas id="canvahorcado" class="canvahorcado" width="1200px" height="800px"></canvas>
+                <input type="text" class="key" id="key">
                 <div id="palabraAdivinar"><ul id="listPalabra"></ul></div>
                 <div id="letrasUsadas"><span class="span" id="span">23df</span></div>
                 <div class="divclsJuego">

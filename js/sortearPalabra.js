@@ -1,60 +1,45 @@
 const palabras = ["JAVA", "AUTO", "CASA", "PERRO","NADIE", "MOUSE", "NUEVE", "CARTON"];
-
-const palabraCambio = "NADIE";
-
-function relevo(palabraAzar){
-    if(palabraCambio==palabraAzar){
-        palabraCambio=palabraAzar;
-        return palabraCambio;
-    }
-    return false;
-}
-
-
-
-function aletatorio(){
-    var rango = palabras.length;     
-    return Math.round(Math.random()*rango); 
-        
-}
+var palabraAzar = "";
+var palabraCambio = [];
 
 function iniciarJuego(){    
-    espaciosLetras(palabras);
+    espaciosLetras();
     //limpiarTablero();
 }
 
-function sortear(arr){                   
-    var azar = aletatorio();
-    if(arr[azar]===undefined){                
-        return arr[0];               
-    }    
-    return arr[azar];        
+function sortear(){
+    var palabra = palabras[Math.floor(Math.random()*palabras.length)];
+    palabraAzar = palabra;    
+    return palabraAzar;
 }
 
-function espaciosLetras(arr){
-    var palabraAzar = sortear(arr);
+function espaciosLetras(){
+    var palabraAzar = sortear();
     console.log(palabraAzar);    
     var i = 0;
     while(i<palabraAzar.length){
-        crearEspacio();
+        crearEspacio(i);
         i++;
     }
     
 }
 
+
+
 function limpiarEspacios(){
     var list = document.getElementById("listPalabra");
-
     while (list.hasChildNodes()) {  
         list.removeChild(list.firstChild);
     }
 }
 
-function crearEspacio(){
+function crearEspacio(i){
+    
     lista = document.querySelector("#listPalabra");
     var li = document.createElement("li");
     li.classList.add("items");
     li.classList.add("letra");
+    li.id = (i);
     li.textContent = "_____";
     lista.appendChild(li);
 }

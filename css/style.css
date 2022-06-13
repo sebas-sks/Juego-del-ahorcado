@@ -120,6 +120,15 @@ body{
     margin: auto;
     width: 90%;     
 }
+
+.key{
+    background-color: transparent;
+    border: 0;
+    width: 10px; 
+    opacity: 0;    
+}
+
+
 .canvahorcado{        
     margin: auto;
     display: block;       

@@ -10,9 +10,9 @@ const frmAgregar = document.querySelector("#agrPalabra");
 const frmJuego = document.querySelector("#secJuego");
 
 
-
-btnIniciar.addEventListener("click", function(){    
-    gestorContenido(frmJuego, frmIniciar);       
+btnIniciar.addEventListener("click", function(){       
+    gestorContenido(frmJuego, frmIniciar);     
+    focus();  
     iniciarJuego();     
     //dibujoCompleto();
     //window.onkeydown = captar;
@@ -48,6 +48,9 @@ function gestorContenido(mostrar, quitar){
     mostrar.classList.remove("ocultar");
 }
 
+function focus(){
+    document.querySelector("#key").focus();
+}
 
 /*
 
