@@ -1,4 +1,4 @@
-const palabras = ["JAVA", "AUTO", "CASA", "PERRO","NADIE", "MOUSE", "NUEVE", "CARTON"];
+const palabras = ["JAVA", "ALURA", "AHORCADO", "JAVASCRIPT","COMPUTADORA", "MOUSE", "WIFI", "TECLADO", "FRONTEND"];
 var palabraAzar = "";
 var palabraCambio = [];
 var l = document.querySelector("#key");
