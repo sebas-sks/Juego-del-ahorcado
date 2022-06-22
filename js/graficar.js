@@ -5,18 +5,39 @@ var pincel = canvAhorcado.getContext("2d");
 const x = 450;
 const y = 800;
 
-function dibujoCompleto(){
-    dibujarMarco();
-    dibujarVigaY();
-    dibujarCabeza();
-    dbjbrazoIzquierdo();
-    dbjbrazoDerecho();
-    dibujarPieIzquierdo();
-    dibujarPieDerecho();
+function dibujoCompleto(intentos){
+    switch (intentos) {
+        case 1:
+            dibujarMarco();        
+            break;
+        case 2:
+            dibujarVigaY();    
+            break;
+        case 3:
+            dibujarCabeza();
+            break;
+        case 4:
+            dbjbrazoIzquierdo();    
+            break;
+        case 5:
+            dbjbrazoDerecho();    
+            break;
+        case 6:
+            dibujarPieIzquierdo();
+            break;
+        case 7:
+            dibujarPieDerecho();
+            break;
+        default:
+            mostrarMensajes("warning", "Juego Terminado", "Has perdido la palabra era "+palabraAzar);
+            //iniciarJuego();
+            break;
+    }    
 }
 
 function limpiarTablero(){
     pincel.clearRect(0,0,1200,800);
+    document.getElementById("span").innerHTML = "";
 }
 
 function dibujarMarco(){
