@@ -1,6 +1,8 @@
+//////////////////////////////DESARROLLADO POR SEBASTIAN VELASCO///////////////////////////////////
+////////////////////////////////ESTE ARCHIVO SE ENCARGA DE DIBUJAR EL AHORCADO/////////////////////////////////
+/////////////////////INICIALIZANDO LOS VALORES DEL CANVAS//////////////////////////////
 var canvAhorcado = document.querySelector("#canvahorcado");
 var pincel = canvAhorcado.getContext("2d");
-
 
 const x = 450;
 const y = 800;
@@ -33,13 +35,16 @@ function dibujoCompleto(intentos){
             //iniciarJuego();
             break;
     }    
-}
+}//Dibuja cada extremidad del ahorcado segun el numero de intentos fallidos que usuario tenga
+//ya sea que gane o pierda
 
 function limpiarTablero(){
     pincel.clearRect(0,0,1200,800);
     document.getElementById("span").innerHTML = "";
-}
+}//Limpia el tablero para iniciar un nuevo juego
 
+
+/////////////////////FUNCIONES QUE DIBUJAN EL AHORCADO//////////////////////
 function dibujarMarco(){
     pincel.fillStyle="black" //Este es el codigo de la base
     pincel.beginPath(); 
@@ -50,25 +55,21 @@ function dibujarMarco(){
     pincel.beginPath(); 
     pincel.fillRect(x-5,y-450,10,450); //Este es la viga principal de la horca
 }
+
 function dibujarVigaY(){    
     pincel.fillRect(x-5,y-450,200,10); //Este es el mastil superior de la horca
     pincel.fillRect(x+195,y-450,10,70);     
 }
 
-function dibujarCabeza(){
-    //cabeza del muñeco
+function dibujarCabeza(){    
     pincel.beginPath(); 
     pincel.fillStyle = "black";
     pincel.arc(x+200, y-380, 30, 0, 2 * Math.PI);
-
     pincel.fill();
-
     pincel.beginPath(); 
     pincel.fillStyle = "white";
     pincel.arc(x+200, y-380, 20, 0, 2 * Math.PI);
-    pincel.fill();
-    //cabeza del muñeco
-
+    pincel.fill();    
 }
 
 function dbjbrazoDerecho(){

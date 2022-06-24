@@ -1,3 +1,6 @@
+//////////////////////////////DESARROLLADO POR SEBASTIAN VELASCO///////////////////////////////////
+////////////////////////////////ESTE ARCHIVO SE ENCARGA DE LOS PROCESOS PARA GUARDAR UNA NUEVA PALABRA DENTRO DEL JUEGO/////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function validarPalabra(){    
     var nuevaPalabra = document.getElementById("txtAgre").value.toLowerCase();    
     if(nuevaPalabra==""){
@@ -20,7 +23,9 @@ function validarPalabra(){
             }
         }
     }
-}
+}//Funcion que realiza la validacion del input donde el usuario coloca la nueva palabra a agregar
+//Verifica que no sobrepase los 8 caracteres, que no trate de ingresar un valor numerico 
+//ni mucho menos una palabra repetida u nula
 
 function elementoExiste(palabras, palabra){
     if(palabras.indexOf(palabra) === -1){        
@@ -29,18 +34,17 @@ function elementoExiste(palabras, palabra){
         mostrarMensajes("warning", "¡Elemento duplicado!", "Esta palabra ya existe");
         return false;
     }
-}
+}//Verifica que la palabra no exista en el juego
 
 function agregarJuego(){    
     const vrfPalabra = validarPalabra(); 
     if(vrfPalabra){            
         palabras.push(vrfPalabra.toUpperCase());
-        document.getElementById("txtAgre").value = "";
-        console.log(palabras);
+        document.getElementById("txtAgre").value = "";        
         return true;      
     }
     return false;
-}
+}//Funcion que agrega la palabra dentro del arreglo para usarla en el juego
 
 function mostrarMensajes(icono, titulo, mensaje){
     Swal.fire(
@@ -52,4 +56,4 @@ function mostrarMensajes(icono, titulo, mensaje){
             toast: "true"
         }
     );
-}
+}//Funcion usada dentro de todo el juego para poder mostrar mensajes al usuario
